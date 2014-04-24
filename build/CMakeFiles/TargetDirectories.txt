@@ -1,0 +1,1 @@
+/home/jamesd/Developer/MPU9050/build/CMakeFiles/MPU9050.dir

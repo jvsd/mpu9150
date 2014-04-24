@@ -1729,9 +1729,9 @@ void MPU6050::getMotion9(int16_t* ax, int16_t* ay, int16_t* az, int16_t* gx, int
 	
 	//read mag
 	I2Cdev::writeByte(devAddr, MPU6050_RA_INT_PIN_CFG, 0x02); //set i2c bypass enable pin to true to access magnetometer
-	delay(10);
+	usleep(10000);
 	I2Cdev::writeByte(MPU9150_RA_MAG_ADDRESS, 0x0A, 0x01); //enable the magnetometer
-	delay(10);
+	usleep(10000);
 	I2Cdev::readBytes(MPU9150_RA_MAG_ADDRESS, MPU9150_RA_MAG_XOUT_L, 6, buffer);
 	*mx = (((int16_t)buffer[1]) << 8) | buffer[0];
         *my = (((int16_t)buffer[3]) << 8) | buffer[2];
@@ -1742,9 +1742,9 @@ void MPU6050::getMag(int16_t* mx, int16_t* my, int16_t* mz) {
     
 	//read mag
 	I2Cdev::writeByte(devAddr, MPU6050_RA_INT_PIN_CFG, 0x02); //set i2c bypass enable pin to true to access magnetometer
-	delay(10);
+	usleep(10000);
 	I2Cdev::writeByte(MPU9150_RA_MAG_ADDRESS, 0x0A, 0x01); //enable the magnetometer
-	delay(10);
+	usleep(10000);
 	I2Cdev::readBytes(MPU9150_RA_MAG_ADDRESS, MPU9150_RA_MAG_XOUT_L, 6, buffer);
 	*mx = (((int16_t)buffer[1]) << 8) | buffer[0];
         *my = (((int16_t)buffer[3]) << 8) | buffer[2];
@@ -2995,6 +2995,7 @@ void MPU6050::readMemoryBlock(uint8_t *data, uint16_t dataSize, uint8_t bank, ui
     }
 }
 bool MPU6050::writeMemoryBlock(const uint8_t *data, uint16_t dataSize, uint8_t bank, uint8_t address, bool verify, bool useProgMem) {
+    /*
     setMemoryBank(bank);
     setMemoryStartAddress(address);
     uint8_t chunkSize;
@@ -3046,7 +3047,7 @@ bool MPU6050::writeMemoryBlock(const uint8_t *data, uint16_t dataSize, uint8_t b
                     if (verifyBuffer[i + j] < 16) Serial.print("0");
                     Serial.print(verifyBuffer[i + j], HEX);
                 }
-                Serial.print("\n");*/
+                Serial.print("\n");
                 free(verifyBuffer);
                 if (useProgMem) free(progBuffer);
                 return false; // uh oh.
@@ -3067,13 +3068,14 @@ bool MPU6050::writeMemoryBlock(const uint8_t *data, uint16_t dataSize, uint8_t b
         }
     }
     if (verify) free(verifyBuffer);
-    if (useProgMem) free(progBuffer);
-    return true;
+    if (useProgMem) free(progBuffer);*/
+    return false;
 }
 bool MPU6050::writeProgMemoryBlock(const uint8_t *data, uint16_t dataSize, uint8_t bank, uint8_t address, bool verify) {
     return writeMemoryBlock(data, dataSize, bank, address, verify, true);
 }
 bool MPU6050::writeDMPConfigurationSet(const uint8_t *data, uint16_t dataSize, bool useProgMem) {
+    /*
     uint8_t *progBuffer, success, special;
     uint16_t i, j;
     if (useProgMem) {
@@ -3102,7 +3104,7 @@ bool MPU6050::writeDMPConfigurationSet(const uint8_t *data, uint16_t dataSize, b
             Serial.print(", offset ");
             Serial.print(offset);
             Serial.print(", length=");
-            Serial.println(length);*/
+            Serial.println(length);
             if (useProgMem) {
                 if (sizeof(progBuffer) < length) progBuffer = (uint8_t *)realloc(progBuffer, length);
                 for (j = 0; j < length; j++) progBuffer[j] = pgm_read_byte(data + i + j);
@@ -3124,7 +3126,7 @@ bool MPU6050::writeDMPConfigurationSet(const uint8_t *data, uint16_t dataSize, b
             }
             /*Serial.print("Special command code ");
             Serial.print(special, HEX);
-            Serial.println(" found...");*/
+            Serial.println(" found...");
             if (special == 0x01) {
                 // enable DMP-related interrupts
                 
@@ -3146,7 +3148,8 @@ bool MPU6050::writeDMPConfigurationSet(const uint8_t *data, uint16_t dataSize, b
         }
     }
     if (useProgMem) free(progBuffer);
-    return true;
+    */
+    return false;
 }
 bool MPU6050::writeProgDMPConfigurationSet(const uint8_t *data, uint16_t dataSize) {
     return writeDMPConfigurationSet(data, dataSize, true);

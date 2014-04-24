@@ -1,0 +1,3 @@
+FILE(REMOVE_RECURSE
+  "libMPU9050.a"
+)
