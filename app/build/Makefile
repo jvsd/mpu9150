@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jamesd/Developer/MPU9050
+CMAKE_SOURCE_DIR = /home/jamesd/Developer/MPU9050/app
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jamesd/Developer/MPU9050/build
+CMAKE_BINARY_DIR = /home/jamesd/Developer/MPU9050/app/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamesd/Developer/MPU9050/build/CMakeFiles /home/jamesd/Developer/MPU9050/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamesd/Developer/MPU9050/app/build/CMakeFiles /home/jamesd/Developer/MPU9050/app/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamesd/Developer/MPU9050/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamesd/Developer/MPU9050/app/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -99,65 +99,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MPU9050
+# Target rules for targets named main
 
 # Build rule for target.
-MPU9050: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 MPU9050
-.PHONY : MPU9050
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-MPU9050/fast:
-	$(MAKE) -f CMakeFiles/MPU9050.dir/build.make CMakeFiles/MPU9050.dir/build
-.PHONY : MPU9050/fast
+main/fast:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
-MPU6050.o: MPU6050.cpp.o
-.PHONY : MPU6050.o
-
-# target to build an object file
-MPU6050.cpp.o:
-	$(MAKE) -f CMakeFiles/MPU9050.dir/build.make CMakeFiles/MPU9050.dir/MPU6050.cpp.o
-.PHONY : MPU6050.cpp.o
-
-MPU6050.i: MPU6050.cpp.i
-.PHONY : MPU6050.i
-
-# target to preprocess a source file
-MPU6050.cpp.i:
-	$(MAKE) -f CMakeFiles/MPU9050.dir/build.make CMakeFiles/MPU9050.dir/MPU6050.cpp.i
-.PHONY : MPU6050.cpp.i
-
-MPU6050.s: MPU6050.cpp.s
-.PHONY : MPU6050.s
-
-# target to generate assembly for a file
-MPU6050.cpp.s:
-	$(MAKE) -f CMakeFiles/MPU9050.dir/build.make CMakeFiles/MPU9050.dir/MPU6050.cpp.s
-.PHONY : MPU6050.cpp.s
-
-home/jamesd/Developer/I2Cdev/I2Cdev.o: home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o
-.PHONY : home/jamesd/Developer/I2Cdev/I2Cdev.o
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o:
-	$(MAKE) -f CMakeFiles/MPU9050.dir/build.make CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o
-.PHONY : home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-home/jamesd/Developer/I2Cdev/I2Cdev.i: home/jamesd/Developer/I2Cdev/I2Cdev.cpp.i
-.PHONY : home/jamesd/Developer/I2Cdev/I2Cdev.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-home/jamesd/Developer/I2Cdev/I2Cdev.cpp.i:
-	$(MAKE) -f CMakeFiles/MPU9050.dir/build.make CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.i
-.PHONY : home/jamesd/Developer/I2Cdev/I2Cdev.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-home/jamesd/Developer/I2Cdev/I2Cdev.s: home/jamesd/Developer/I2Cdev/I2Cdev.cpp.s
-.PHONY : home/jamesd/Developer/I2Cdev/I2Cdev.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-home/jamesd/Developer/I2Cdev/I2Cdev.cpp.s:
-	$(MAKE) -f CMakeFiles/MPU9050.dir/build.make CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.s
-.PHONY : home/jamesd/Developer/I2Cdev/I2Cdev.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -165,15 +141,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... MPU9050"
 	@echo "... edit_cache"
+	@echo "... main"
 	@echo "... rebuild_cache"
-	@echo "... MPU6050.o"
-	@echo "... MPU6050.i"
-	@echo "... MPU6050.s"
-	@echo "... home/jamesd/Developer/I2Cdev/I2Cdev.o"
-	@echo "... home/jamesd/Developer/I2Cdev/I2Cdev.i"
-	@echo "... home/jamesd/Developer/I2Cdev/I2Cdev.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

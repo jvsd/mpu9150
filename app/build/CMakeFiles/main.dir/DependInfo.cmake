@@ -4,8 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jamesd/Developer/MPU9050/MPU6050.cpp" "/home/jamesd/Developer/MPU9050/build/CMakeFiles/MPU9050.dir/MPU6050.cpp.o"
-  "/home/jamesd/Developer/I2Cdev/I2Cdev.cpp" "/home/jamesd/Developer/MPU9050/build/CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o"
+  "/home/jamesd/Developer/MPU9050/app/main.cpp" "/home/jamesd/Developer/MPU9050/app/build/CMakeFiles/main.dir/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,7 +15,9 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
   "../."
-  "../../I2Cdev"
+  "../.."
+  "/home/jamesd/Developer/I2Cdev"
+  "/home/jamesd/Developer/MPU9050"
   "/usr/include/glib-2.0"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

@@ -1,0 +1,1 @@
+/home/jamesd/Developer/MPU9050/app/build/CMakeFiles/main.dir

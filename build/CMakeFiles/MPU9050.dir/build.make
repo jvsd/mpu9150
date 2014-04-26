@@ -72,14 +72,39 @@ CMakeFiles/MPU9050.dir/MPU6050.cpp.o.provides: CMakeFiles/MPU9050.dir/MPU6050.cp
 
 CMakeFiles/MPU9050.dir/MPU6050.cpp.o.provides.build: CMakeFiles/MPU9050.dir/MPU6050.cpp.o
 
+CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o: CMakeFiles/MPU9050.dir/flags.make
+CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o: /home/jamesd/Developer/I2Cdev/I2Cdev.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jamesd/Developer/MPU9050/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o -c /home/jamesd/Developer/I2Cdev/I2Cdev.cpp
+
+CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jamesd/Developer/I2Cdev/I2Cdev.cpp > CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.i
+
+CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jamesd/Developer/I2Cdev/I2Cdev.cpp -o CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.s
+
+CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o.requires:
+.PHONY : CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o.requires
+
+CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o.provides: CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o.requires
+	$(MAKE) -f CMakeFiles/MPU9050.dir/build.make CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o.provides.build
+.PHONY : CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o.provides
+
+CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o.provides.build: CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o
+
 # Object files for target MPU9050
 MPU9050_OBJECTS = \
-"CMakeFiles/MPU9050.dir/MPU6050.cpp.o"
+"CMakeFiles/MPU9050.dir/MPU6050.cpp.o" \
+"CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o"
 
 # External object files for target MPU9050
 MPU9050_EXTERNAL_OBJECTS =
 
 libMPU9050.a: CMakeFiles/MPU9050.dir/MPU6050.cpp.o
+libMPU9050.a: CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o
 libMPU9050.a: CMakeFiles/MPU9050.dir/build.make
 libMPU9050.a: CMakeFiles/MPU9050.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libMPU9050.a"
@@ -91,6 +116,7 @@ CMakeFiles/MPU9050.dir/build: libMPU9050.a
 .PHONY : CMakeFiles/MPU9050.dir/build
 
 CMakeFiles/MPU9050.dir/requires: CMakeFiles/MPU9050.dir/MPU6050.cpp.o.requires
+CMakeFiles/MPU9050.dir/requires: CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o.requires
 .PHONY : CMakeFiles/MPU9050.dir/requires
 
 CMakeFiles/MPU9050.dir/clean:

@@ -1,5 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/MPU9050.dir/MPU6050.cpp.o"
+  "CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o"
   "libMPU9050.pdb"
   "libMPU9050.a"
 )

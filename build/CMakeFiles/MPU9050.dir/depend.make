@@ -4,3 +4,6 @@
 CMakeFiles/MPU9050.dir/MPU6050.cpp.o: ../MPU6050.cpp
 CMakeFiles/MPU9050.dir/MPU6050.cpp.o: ../MPU6050.h
 
+CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o: /home/jamesd/Developer/I2Cdev/I2Cdev.cpp
+CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o: /home/jamesd/Developer/I2Cdev/I2Cdev.h
+

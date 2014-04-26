@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/jamesd/Developer/I2Cdev/I2Cdev.cpp
+../../MPU6050.h
 I2Cdev.h
-/home/jamesd/Developer/I2Cdev/I2Cdev.h
+../../I2Cdev.h
 
 /home/jamesd/Developer/I2Cdev/I2Cdev.h
 linux/i2c-dev.h
@@ -32,5 +32,21 @@ sys/stat.h
 stdint.h
 -
 fcntl.h
+-
+
+/home/jamesd/Developer/MPU9050/app/main.cpp
+I2Cdev.h
+/home/jamesd/Developer/MPU9050/app/I2Cdev.h
+MPU6050.h
+/home/jamesd/Developer/MPU9050/app/MPU6050.h
+stdio.h
+-
+iostream
+-
+linux/i2c-dev.h
+-
+sys/ioctl.h
+-
+sys/types.h
 -
 
