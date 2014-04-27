@@ -1,1 +1,1 @@
-/usr/bin/c++       CMakeFiles/main.dir/main.cpp.o  -o main -rdynamic /home/jamesd/Developer/MPU9050/build/libMPU9050.a 
+/usr/bin/c++       CMakeFiles/main.dir/main.cpp.o  -o main -rdynamic /home/jamesd/Developer/MPU9150/build/libMPU9050.a -lrt 

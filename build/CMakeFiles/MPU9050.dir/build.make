@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jamesd/Developer/MPU9050
+CMAKE_SOURCE_DIR = /home/jamesd/Developer/MPU9150
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jamesd/Developer/MPU9050/build
+CMAKE_BINARY_DIR = /home/jamesd/Developer/MPU9150/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MPU9050.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/MPU9050.dir/flags.make
 
 CMakeFiles/MPU9050.dir/MPU6050.cpp.o: CMakeFiles/MPU9050.dir/flags.make
 CMakeFiles/MPU9050.dir/MPU6050.cpp.o: ../MPU6050.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jamesd/Developer/MPU9050/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jamesd/Developer/MPU9150/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/MPU9050.dir/MPU6050.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MPU9050.dir/MPU6050.cpp.o -c /home/jamesd/Developer/MPU9050/MPU6050.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MPU9050.dir/MPU6050.cpp.o -c /home/jamesd/Developer/MPU9150/MPU6050.cpp
 
 CMakeFiles/MPU9050.dir/MPU6050.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MPU9050.dir/MPU6050.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jamesd/Developer/MPU9050/MPU6050.cpp > CMakeFiles/MPU9050.dir/MPU6050.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jamesd/Developer/MPU9150/MPU6050.cpp > CMakeFiles/MPU9050.dir/MPU6050.cpp.i
 
 CMakeFiles/MPU9050.dir/MPU6050.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MPU9050.dir/MPU6050.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jamesd/Developer/MPU9050/MPU6050.cpp -o CMakeFiles/MPU9050.dir/MPU6050.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jamesd/Developer/MPU9150/MPU6050.cpp -o CMakeFiles/MPU9050.dir/MPU6050.cpp.s
 
 CMakeFiles/MPU9050.dir/MPU6050.cpp.o.requires:
 .PHONY : CMakeFiles/MPU9050.dir/MPU6050.cpp.o.requires
@@ -74,7 +74,7 @@ CMakeFiles/MPU9050.dir/MPU6050.cpp.o.provides.build: CMakeFiles/MPU9050.dir/MPU6
 
 CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o: CMakeFiles/MPU9050.dir/flags.make
 CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o: /home/jamesd/Developer/I2Cdev/I2Cdev.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jamesd/Developer/MPU9050/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jamesd/Developer/MPU9150/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/MPU9050.dir/home/jamesd/Developer/I2Cdev/I2Cdev.cpp.o -c /home/jamesd/Developer/I2Cdev/I2Cdev.cpp
 
@@ -124,6 +124,6 @@ CMakeFiles/MPU9050.dir/clean:
 .PHONY : CMakeFiles/MPU9050.dir/clean
 
 CMakeFiles/MPU9050.dir/depend:
-	cd /home/jamesd/Developer/MPU9050/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jamesd/Developer/MPU9050 /home/jamesd/Developer/MPU9050 /home/jamesd/Developer/MPU9050/build /home/jamesd/Developer/MPU9050/build /home/jamesd/Developer/MPU9050/build/CMakeFiles/MPU9050.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jamesd/Developer/MPU9150/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jamesd/Developer/MPU9150 /home/jamesd/Developer/MPU9150 /home/jamesd/Developer/MPU9150/build /home/jamesd/Developer/MPU9150/build /home/jamesd/Developer/MPU9150/build/CMakeFiles/MPU9050.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/MPU9050.dir/depend
 
