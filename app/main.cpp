@@ -56,13 +56,13 @@ int main(void)
 
 void startTime()
 {
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID,&count1);
+    clock_gettime(CLOCK_REALTIME,&count1);
 }
 
 double getElapsed()
 {
     timespec current;
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID,&current);
+    clock_gettime(CLOCK_REALTIME,&current);
     return diff(count1,current);
 }
 
