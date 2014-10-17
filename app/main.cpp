@@ -6,6 +6,7 @@
 #include <sys/ioctl.h>
 #include <sys/types.h>
 #include <time.h>
+#include <zhelpers.hpp>
 timespec count1;
 
 void startTime();
@@ -14,6 +15,12 @@ double diff(timespec start, timespec end);
 
 int main(void)
 {
+    zmq::context_t context(1);
+    zmq::socket_t socket(context,ZMQ_PUB);
+    socket.bind("tcp://*:5555");
+    std::ostringstream oss;
+
+
     int file;
     char *filename = "/dev/i2c-1";
     if ((file=open(filename,O_RDWR)) < 0){
@@ -50,7 +57,8 @@ int main(void)
     {
     mpu.getAcceleration(&ax, &ay, &az);
     mpu.getRotation(&gx, &gy, &gz);
-    std::cout << ax <<"\t"<< ay <<" \t"<< az <<"\t"<< gx <<"\t"<< gy <<"\t"<< gz << "\t" << getElapsed() <<  std::endl;
+    oss << ax <<"\t"<< ay <<" \t"<< az <<"\t"<< gx <<"\t"<< gy <<"\t"<< gz << "\t" << getElapsed() <<  std::endl;
+    s_send(socket,oss.str());
     }
 }
 
