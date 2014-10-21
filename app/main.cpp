@@ -17,8 +17,7 @@ int main(void)
 {
     zmq::context_t context(1);
     zmq::socket_t socket(context,ZMQ_PUB);
-    socket.bind("tcp://*:5555");
-    std::ostringstream oss;
+    socket.bind("tcp://*:6001");
 
 
     int file;
@@ -55,6 +54,7 @@ int main(void)
     startTime();
     while(true)
     {
+    std::ostringstream oss;
     mpu.getAcceleration(&ax, &ay, &az);
     mpu.getRotation(&gx, &gy, &gz);
     oss << ax <<"\t"<< ay <<" \t"<< az <<"\t"<< gx <<"\t"<< gy <<"\t"<< gz << "\t" << getElapsed() <<  std::endl;
