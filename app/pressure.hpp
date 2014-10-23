@@ -10,11 +10,12 @@
 
 class pressure{
     public:
-        pressure();
-        std::ostringstream getPressure(int file);
+        pressure(int file);
+        std::ostringstream getPressure();
         static void decode(char* buf, int16_t* out);
     private:
         int16_t pressure[24];
         char pbuffer[48];
+        int file;
 };
 

@@ -1,25 +1,27 @@
 # The set of languages for which implicit dependencies are needed:
-SET(CMAKE_DEPENDS_LANGUAGES
+set(CMAKE_DEPENDS_LANGUAGES
   "CXX"
   )
 # The set of files for implicit dependencies of each language:
-SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jamesd/Developer/MPU9150/app/main.cpp" "/home/jamesd/Developer/MPU9150/app/build/CMakeFiles/main.dir/main.cpp.o"
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/jamesd/Dropbox/Developer/beagle/MPU9150/app/main.cpp" "/Users/jamesd/Dropbox/Developer/beagle/MPU9150/app/build/CMakeFiles/main.dir/main.cpp.o"
+  "/Users/jamesd/Dropbox/Developer/beagle/MPU9150/app/pressure.cpp" "/Users/jamesd/Dropbox/Developer/beagle/MPU9150/app/build/CMakeFiles/main.dir/pressure.cpp.o"
   )
-SET(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # Targets to which this target links.
-SET(CMAKE_TARGET_LINKED_INFO_FILES
+set(CMAKE_TARGET_LINKED_INFO_FILES
   )
 
 # The include file search paths:
-SET(CMAKE_C_TARGET_INCLUDE_PATH
+set(CMAKE_C_TARGET_INCLUDE_PATH
   "../."
   "../.."
-  "/home/jamesd/Developer/I2Cdev"
-  "/home/jamesd/Developer/MPU9050"
+  "../../../I2Cdev"
+  "../../MPU9050"
+  "/Volumes/Disk/Users/jamesd/Dropbox/Developer/linux"
   "/usr/include/glib-2.0"
   )
-SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
-SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
-SET(CMAKE_ASM_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+set(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+set(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+set(CMAKE_ASM_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

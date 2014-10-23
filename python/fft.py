@@ -26,8 +26,8 @@ def plotspectrum(y,Fs,color):
     plt.ylabel('|Y(freq)|')
 
 data = np.loadtxt('out.txt')
-a = data[:,0:3]/4092.
-g = data[:,3:6]/65.5
+a = data[:,0:3]
+g = data[:,3:6]
 t = data[:,-1]
 
 dt = []

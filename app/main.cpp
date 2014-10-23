@@ -51,6 +51,9 @@ int main(void)
     mpu.setFullScaleAccelRange(1);// +/- 4g 4092 LSB/mg
     int16_t ax, ay, az;
     int16_t gx, gy, gz;
+
+    pressure pboard(file);
+
     ax = 1;
     startTime();
     while(true)
@@ -60,6 +63,9 @@ int main(void)
     mpu.getRotation(&gx, &gy, &gz);
     oss << ax <<"\t"<< ay <<" \t"<< az <<"\t"<< gx <<"\t"<< gy <<"\t"<< gz << "\t" << getElapsed() <<  std::endl;
     s_send(socket,oss.str());
+    std::ostringstream pss;
+    pss << pboard.getPressure() << getElapsed() << std::endl;
+    s_send(socket,pss.str())
     }
 }
 

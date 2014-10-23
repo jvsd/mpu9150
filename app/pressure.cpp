@@ -1,9 +1,9 @@
 #include "pressure.hpp"
 
-pressure::pressure()
-{}
+pressure::pressure(int i2c)
+{file = i2c;}
 
-std::ostringstream pressure::getPressure(int file)
+std::ostringstream pressure::getPressure()
 {
     ioctl(file,I2C_SLAVE,PRESSURE_ADDR);
     std::ostringstream oss;
