@@ -10,5 +10,5 @@ include_directories(
     )
 
 add_executable(main main.cpp pressure.cpp)
-target_link_libraries(main /home/jamesd/Developer/MPU9150/build/libMPU9050.a rt zmq)
+target_link_libraries(main ${CMAKE_SOURCE_DIR}/../MPU9150/build/libMPU9050.a rt zmq)
 

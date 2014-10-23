@@ -10,7 +10,7 @@
 
 class pressure{
     public:
-        pressure(int file);
+        pressure(int i2c);
         std::ostringstream getPressure();
         static void decode(char* buf, int16_t* out);
     private:
