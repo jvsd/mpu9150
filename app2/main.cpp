@@ -1,5 +1,4 @@
 #include "I2Cdev.h"
-#include "MPU6050.h"
 #include <stdio.h>
 #include <iostream>
 #include <linux/i2c-dev.h>
@@ -7,6 +6,7 @@
 #include <sys/types.h>
 #include <time.h>
 #include <zhelpers.hpp>
+#include <pressure.hpp>
 timespec count1;
 
 void startTime();
@@ -17,7 +17,7 @@ int main(void)
 {
     zmq::context_t context(1);
     zmq::socket_t socket(context,ZMQ_PUB);
-    socket.bind("tcp://*:6001");
+    socket.bind("tcp://*:6002");
 
 
     int file;
@@ -27,40 +27,22 @@ int main(void)
             return 1;
             }
 
-    if (ioctl(file,I2C_SLAVE,0x68) < 0)
+    if (ioctl(file,I2C_SLAVE,0x29) < 0)
     {
         std::cout << "Failed to talk to slave" << std::endl;
         return 1;
     }
             
-    MPU6050 mpu(file);
-    mpu.initialize();
-    if(mpu.testConnection())
-    {
-        std::cout << "connected" << std::endl;
-    }else{
-        std::cout << int(mpu.getDeviceID()) << std::endl;
-    }
-    std::cout << "Rate: " << int(mpu.getRate()) << std::endl;
 
+    pressure pboard(file);
 
-    mpu.setRate(7);
-    mpu.setDLPFMode(0);
-    mpu.setFullScaleGyroRange(1);// +/- 500 degree/s 65.5 LSB/deg/s
-    mpu.setFullScaleAccelRange(1);// +/- 4g 4092 LSB/mg
-    int16_t ax, ay, az;
-    int16_t gx, gy, gz;
-
-
-    ax = 1;
     startTime();
+
     while(true)
     {
-    std::ostringstream oss;
-    mpu.getAcceleration(&ax, &ay, &az);
-    mpu.getRotation(&gx, &gy, &gz);
-    oss << "2\t" << ax <<"\t"<< ay <<" \t"<< az <<"\t"<< gx <<"\t"<< gy <<"\t"<< gz << "\t" << getElapsed() <<  std::endl;
-    s_send(socket,oss.str());
+    std::ostringstream pss;
+    pss << "2\t" << pboard.getPressure() << getElapsed() << std::endl;
+    s_send(socket,pss.str())
     }
 }
 
