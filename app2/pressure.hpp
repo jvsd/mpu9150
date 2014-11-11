@@ -11,10 +11,10 @@
 class pressure{
     public:
         pressure(int i2c);
-        std::ostringstream getPressure();
+        std::string getPressure();
         static void decode(char* buf, int16_t* out);
     private:
-        int16_t pressure[24];
+        int16_t pressureData[24];
         char pbuffer[48];
         int file;
 };
